@@ -11,8 +11,9 @@ const url = require('url');
 // const server = http.createServer(app).listen(3000,function(){console.log(`3000번 port에 http server를 띄웠습니다.`)});
 
 
-app.use("/public", express.static(__dirname + "/script"));
+app.use("/public", express.static(__dirname + "/public"));
 console.log(__dirname);
+
 app.get('/', (req, res) => {
     fs.readFile('./index.html', (err, data) => {
         if (err) throw err;
